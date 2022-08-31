@@ -2,7 +2,7 @@
 #include <vector>
 #include <map>
 #include <iostream>
-
+#include<math.h>
 // Programmers
 
 using namespace std;
@@ -10,6 +10,7 @@ string solution(vector<string> survey, vector<int> choices);
 
 int main()
 {
+
 	vector<string> vs = { "AN", "CF", "MJ", "RT", "NA" };
 	vector<int> vi = { 5, 3, 2, 7, 5 };
 	cout << solution(vs, vi);

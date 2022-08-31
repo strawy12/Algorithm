@@ -1,6 +1,7 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <unordered_set>
 using namespace std;
 
 int solution(vector<int> nums);
@@ -17,7 +18,9 @@ int solution(vector<int> nums)
 {
     int answer = 0;
 	vector<int> ponketmonNums;
+	unordered_set<int> s(ponketmonNums.begin(), ponketmonNums.end());
 
+	
 	int selectCnt = nums.size() / 2;
 
 	int ponketmonCnt = 0;
