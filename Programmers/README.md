@@ -4,6 +4,12 @@
 
 </div> <br><br>
 
+## 바로 가기
+[🔠🔢 숫자 문자열과 영단어](https://github.com/strawy12/Algorithm/blob/main/Programmers/README.md#-%EC%88%AB%EC%9E%90-%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B3%BC-%EC%98%81%EB%8B%A8%EC%96%B4)
+
+<br><br>
+
+## 알고리즘 노트
 ### 🔠🔢 숫자 문자열과 영단어<br>
 <a href="https://school.programmers.co.kr/learn/courses/30/lessons/81301">문제 보기</a><br>
 <a href="https://github.com/strawy12/Algorithm/blob/main/Programmers/%EC%88%AB%EC%9E%90%20%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B3%BC%20%EC%98%81%EB%8B%A8%EC%96%B4.cpp">코드 보기</a>
