@@ -28,10 +28,10 @@
   그렇게 나온 코드는 처참했다.<br><br>
    <img src="https://user-images.githubusercontent.com/77821550/187939585-f4504265-8490-4f09-93e2-592315de3b76.png"  width="400" height="250"/>
 
-  약 100줄이 되는 코드가 나오게 되었다. <br><br>
+  약 100줄이 되는 [코드](https://github.com/strawy12/Algorithm/blob/c88be9c2aed826842abbe96b3b2055fe800ee5cb/Programmers/%EC%88%AB%EC%9E%90%20%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B3%BC%20%EC%98%81%EB%8B%A8%EC%96%B4.cpp#L7)가 나오게 되었다. <br><br>
   
   #### 개선한 코드
-  위와같은 코드를 작성한 이후 다른 방법을 여러가지 고민해보고 참고해보고 검색해본 결과 이러한 코드가 나오게 됐다<br><br>
+  위와같은 코드를 작성한 이후 다른 방법을 여러가지 고민해보고 참고해보고 검색해본 결과 이러한 [코드](https://github.com/strawy12/Algorithm/blob/c88be9c2aed826842abbe96b3b2055fe800ee5cb/Programmers/%EC%88%AB%EC%9E%90%20%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B3%BC%20%EC%98%81%EB%8B%A8%EC%96%B4.cpp#L104)가 나오게 됐다<br><br>
    <img src="https://user-images.githubusercontent.com/77821550/187940139-d780f8c5-1e88-466e-9ac6-ef8b04464adf.png"  width="400" height="280"/>
 
  이 알고리즘은 위와 비슷한 구조로 되어있지만 좀 더 간단히 되어있다.
