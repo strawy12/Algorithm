@@ -21,9 +21,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="같은 숫자는 싫어.cpp">
-      <Filter>소스 파일\Programmers</Filter>
-    </ClCompile>
     <ClCompile Include="로또의 최고 순위와 최저 순위.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
@@ -45,13 +42,16 @@
     <ClCompile Include="Programmers\폰켓몬.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
-    <ClCompile Include="소스.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Programmers\숫자 문자열과 영단어.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
-    <ClCompile Include="신규 아이디 추천.cpp">
+    <ClCompile Include="Programmers\신규 아이디 추천.cpp">
+      <Filter>소스 파일\Programmers</Filter>
+    </ClCompile>
+    <ClCompile Include="신고결과받기.cpp">
+      <Filter>소스 파일\Programmers</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers\같은 숫자는 싫어.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,9 +1,9 @@
 #include <string>
 #include <vector>
 
-
 using namespace std;
 
+// 첫번째 작성한 코드
 int solution(string s) {
 	int answer = 0;
 	string s_Answer = "";
