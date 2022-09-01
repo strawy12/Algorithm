@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include <regex>
 
 using namespace std;
 
@@ -118,6 +119,22 @@ int solution(string s) {
 		}
 	}
 	
+	answer = stoi(s);
+	return answer;
+}
+
+// 새롭게 알게된 방식
+int solution(string s) {
+	int answer = 0;
+	string nums[10] = {
+		"zero","one","two","three","four",
+		"five","six","seven","eight", "nine" };
+
+	for (int i = 0; i < 10; i++)
+	{
+		s = regex_replace(s, regex(nums[i]), to_string(i));
+	}
+
 	answer = stoi(s);
 	return answer;
 }
