@@ -23,7 +23,7 @@
 이와같은 것들이 이 기타 항목에 있습니다.
 
 - [알고리즘 관련 책의 문제]
-- [새로 알게 된 정보]
-- [문법 정리]
+- [새로 알게 된 정보] (https://github.com/strawy12/Algorithm/blob/main/%EA%B8%B0%ED%83%80/README.md)
+- [문법 정리] (https://github.com/strawy12/Algorithm/blob/main/%EA%B8%B0%ED%83%80/README.md)
 
 <br><br>
