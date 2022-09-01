@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// 첫번째 작성한 코드
+// first code
 int solution(string s) {
 	int answer = 0;
 	string s_Answer = "";
@@ -97,13 +97,15 @@ int solution(string s) {
 		answer += (s_Answer[i] - '0') * pow;
 	}
 
-
 	return answer;
 }
 
+// after fix code
 int solution(string s) {
 	int answer = 0;
-	string nums[10] = { "zero","one","two","three","four","five","six","seven","eight", "nine" };
+	string nums[10] = { 
+		"zero","one","two","three","four",
+		"five","six","seven","eight", "nine" };
 
 	for (int i = 0; i < 10; i++)
 	{
@@ -115,7 +117,7 @@ int solution(string s) {
 			i--;
 		}
 	}
-
+	
 	answer = stoi(s);
 	return answer;
 }
