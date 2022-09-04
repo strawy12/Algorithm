@@ -80,4 +80,9 @@ string.replace(), string.find(), string::npos 에 대해 자세히 알게 되었
   ex) "...!@BaT#*..y.abcdefghijklm" -> bat.y.abcdefghi
   
   #### 알고리즘 설계
+  이 문제는 총 7가지의 조건이 있는데 그 중 특정 글자를 제외한 모든 글자는 제외를 하니 변환할 문자열을 한 글자씩 순차적으로 탐색을 하고 temp변수를 하나 만들어 특정 글자면 += 연산을 해주고 아니라면 더하는 연산을 하지 않는 방식의 구조를 짠 다음 특정 글자의 조건이 있는 경우를 if문으로 하나하나 작성해 완성한다. <br>
+  이렇게 작성하니 이런 [코드](https://github.com/strawy12/Algorithm/blob/main/Programmers/%EC%8B%A0%EA%B7%9C%20%EC%95%84%EC%9D%B4%EB%94%94%20%EC%B6%94%EC%B2%9C.cpp)가 완성되었다.<br>
+  <img src="https://user-images.githubusercontent.com/77821550/188318266-e7027520-5f4d-4191-8667-a8dd5f064353.png"  width="450" height="450"/>
+  <br>
+  이 코드의 문제는 조건 별로 함수나 위치를 나누지 않고 뒤죽박죽으로 작성했다보니 가독성이 매우 떨어진다. 또한 조건 유효성 검사도 위치가 제각각이라 추후 유지 보수에 큰 어려움을 느낄것으로 보인다.
   
