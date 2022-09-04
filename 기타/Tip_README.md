@@ -9,7 +9,7 @@
 
 
 ## 바로가기
- [string]() 
+ [string](https://github.com/strawy12/Algorithm/edit/main/%EA%B8%B0%ED%83%80/Tip_README.md#string) 
  
  <br><br>
  ## string
