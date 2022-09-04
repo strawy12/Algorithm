@@ -28,7 +28,9 @@
   그렇게 나온 코드는 처참했다.<br><br>
    <img src="https://user-images.githubusercontent.com/77821550/187939585-f4504265-8490-4f09-93e2-592315de3b76.png"  width="400" height="250"/>
 
-  약 100줄이 되는 [코드](https://github.com/strawy12/Algorithm/blob/c88be9c2aed826842abbe96b3b2055fe800ee5cb/Programmers/%EC%88%AB%EC%9E%90%20%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B3%BC%20%EC%98%81%EB%8B%A8%EC%96%B4.cpp#L7)가 나오게 되었다. <br><br>
+  약 100줄이 되는 [코드](https://github.com/strawy12/Algorithm/blob/c88be9c2aed826842abbe96b3b2055fe800ee5cb/Programmers/%EC%88%AB%EC%9E%90%20%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B3%BC%20%EC%98%81%EB%8B%A8%EC%96%B4.cpp#L7)가 나오게 되었다. <br>
+  코드를 보시면 바로 알 수 있겠지만 매우 길고 가독성도 떨어지고 새로운 변환단어가 나오게된다면 유지보수하기에도 큰 어려움이 생길 수 있다.
+  <br>
   
   #### 개선한 코드
   위와같은 코드를 작성한 이후 다른 방법을 여러가지 고민해보고 참고해보고 검색해본 결과 이러한 [코드](https://github.com/strawy12/Algorithm/blob/c88be9c2aed826842abbe96b3b2055fe800ee5cb/Programmers/%EC%88%AB%EC%9E%90%20%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B3%BC%20%EC%98%81%EB%8B%A8%EC%96%B4.cpp#L104)가 나오게 됐다<br><br>
@@ -65,3 +67,17 @@ string의 다양한 함수들을 활용하니 100줄짜리 코드도 20줄 코�
 string.replace(), string.find(), string::npos 에 대해 자세히 알게 되었다
  
  
+ ### 🔓신규 아이디 추천<br>
+ 
+<a href="https://school.programmers.co.kr/learn/courses/30/lessons/72410">문제 보기</a><br>
+<a href="https://github.com/strawy12/Algorithm/blob/main/Programmers/%EC%8B%A0%EA%B7%9C%20%EC%95%84%EC%9D%B4%EB%94%94%20%EC%B6%94%EC%B2%9C.cpp">코드 보기</a>
+<br>
+🕑걸린 시간 : 2시간 이상
+
+  #### 문제 분석
+  이 문제는 사용자가 신규 아이디를 만들 때 조건에 맞지 않는 아이디를 작성한다면 조건에 맞으면서 작성한 아이디와 가장 유사한 아이디를 추천하는 알고리즘을 만드는 것이다.<br>
+ 
+  ex) "...!@BaT#*..y.abcdefghijklm" -> bat.y.abcdefghi
+  
+  #### 알고리즘 설계
+  
