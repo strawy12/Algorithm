@@ -15,7 +15,7 @@
 
 ## 알고리즘 노트
 ### 🔠🔢 숫자 문자열과 영단어
- [돌아가기](https://github.com/strawy12/Algorithm/blob/main/Programmers/README.md#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%85%B8%ED%8A%B8)
+ [돌아가기](https://github.com/strawy12/Algorithm/blob/main/Programmers/README.md#progammers)
  <br> <br> 
 <a href="https://school.programmers.co.kr/learn/courses/30/lessons/81301">문제 보기</a><br>
 <a href="https://github.com/strawy12/Algorithm/blob/main/Programmers/%EC%88%AB%EC%9E%90%20%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B3%BC%20%EC%98%81%EB%8B%A8%EC%96%B4.cpp">코드 보기</a>
@@ -74,7 +74,7 @@ string.replace(), string.find(), string::npos 에 대해 자세히 알게 되었
  
  
  ### 🔓신규 아이디 추천 
- [돌아가기](https://github.com/strawy12/Algorithm/blob/main/Programmers/README.md#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%85%B8%ED%8A%B8)
+ [돌아가기](https://github.com/strawy12/Algorithm/blob/main/Programmers/README.md#progammers)
  <br> <br> 
  
 <a href="https://school.programmers.co.kr/learn/courses/30/lessons/72410">문제 보기</a><br>
