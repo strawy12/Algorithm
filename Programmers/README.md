@@ -1,16 +1,22 @@
 <div align="center">
 
   # Progammers
-
+[나가기](https://github.com/strawy12/Algorithm)
 </div> <br><br>
 
 ## 바로 가기
-[🔠🔢 숫자 문자열과 영단어](https://github.com/strawy12/Algorithm/blob/main/Programmers/README.md#-%EC%88%AB%EC%9E%90-%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B3%BC-%EC%98%81%EB%8B%A8%EC%96%B4)
+[📂 폴더가기](https://github.com/strawy12/Algorithm/tree/main/Programmers)
+<br><br>
+
+[🔠🔢 숫자 문자열과 영단어](https://github.com/strawy12/Algorithm/blob/main/Programmers/README.md#-%EC%88%AB%EC%9E%90-%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B3%BC-%EC%98%81%EB%8B%A8%EC%96%B4) <br>
+[🔓신규 아이디 추천](https://github.com/strawy12/Algorithm/edit/main/Programmers/README.md#%EC%8B%A0%EA%B7%9C-%EC%95%84%EC%9D%B4%EB%94%94-%EC%B6%94%EC%B2%9C)
 
 <br><br>
 
 ## 알고리즘 노트
-### 🔠🔢 숫자 문자열과 영단어<br>
+### 🔠🔢 숫자 문자열과 영단어
+ [돌아가기](https://github.com/strawy12/Algorithm/edit/main/Programmers/README.md#progammers)
+ <br> <br> 
 <a href="https://school.programmers.co.kr/learn/courses/30/lessons/81301">문제 보기</a><br>
 <a href="https://github.com/strawy12/Algorithm/blob/main/Programmers/%EC%88%AB%EC%9E%90%20%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B3%BC%20%EC%98%81%EB%8B%A8%EC%96%B4.cpp">코드 보기</a>
 <br>
@@ -67,7 +73,9 @@ string의 다양한 함수들을 활용하니 100줄짜리 코드도 20줄 코�
 string.replace(), string.find(), string::npos 에 대해 자세히 알게 되었다
  
  
- ### 🔓신규 아이디 추천<br>
+ ### 🔓신규 아이디 추천 
+ [돌아가기](https://github.com/strawy12/Algorithm/edit/main/Programmers/README.md#progammers)
+ <br> <br> 
  
 <a href="https://school.programmers.co.kr/learn/courses/30/lessons/72410">문제 보기</a><br>
 <a href="https://github.com/strawy12/Algorithm/blob/main/Programmers/%EC%8B%A0%EA%B7%9C%20%EC%95%84%EC%9D%B4%EB%94%94%20%EC%B6%94%EC%B2%9C.cpp">코드 보기</a>
@@ -85,4 +93,22 @@ string.replace(), string.find(), string::npos 에 대해 자세히 알게 되었
   <img src="https://user-images.githubusercontent.com/77821550/188318266-e7027520-5f4d-4191-8667-a8dd5f064353.png"  width="450" height="450"/>
   <br>
   이 코드의 문제는 조건 별로 함수나 위치를 나누지 않고 뒤죽박죽으로 작성했다보니 가독성이 매우 떨어진다. 또한 조건 유효성 검사도 위치가 제각각이라 추후 유지 보수에 큰 어려움을 느낄것으로 보인다.
+  
+  #### 개선된 코드
+  ※ 여기서 개선된 코드는 내가 혼자 생각한것이 아닌 다른 분이 푸신 것을 참고하여 작성했습니다.<br>
+  [해당 코드 바로가기]()
+  
+  해당코드의 스크린샷입니다.<br>
+  ![image](https://user-images.githubusercontent.com/77821550/188319811-9d62dcd4-ad50-4a5d-be51-718adb529c91.png)
+
+이 구조는 우선 for문을 위에 보단 더 많이 사용하긴 하지만 조건별로 절차적으로 변환되는 가독성 놓은 코드로 바꼈다.
+이 중 가장 인상 깊은 부분은 strchr 함수인데 이 함수는 매개변수로 string, string 타입의 값이 들어가는데 앞에서부터 찾고자한 문자열, 찾을 문자열인데 <br>
+예시를 든다면 만약 "123456" 이라는 문자열에 3이라는 글자가 있는지 확인해보고싶을 때 strchr("3", "123456") 을 한다면 존재하는지 확인 해볼 수 있다. <br>
+<br>
+이 코드의 가장 치명적인 단점은 for문을 여러번 해서 엄청 긴 글자가 들어온다면 많이 시간이 걸릴 순 있다. 그래도 가독성이 좋아 이렇게 개선을 하였다
+<br><br>
+##### 새롭게 알게된 점, 느낀점
+우선 strchr 라는 문자열 검색 함수를 새롭게 알게되었고 tolower, toupper 로 대 > 소문자, 소 > 대문자로 변경할 수 있다는 점을 알았다<br>
+마지막으로 코드를 짤 때 무작정 짜지말고 가독성 좋게 짜보도록 노력해야할거같다
+
   
