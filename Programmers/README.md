@@ -68,7 +68,9 @@ int solution(string s) {
  
  우선 첫번째로 가장 크게 달라진 점은 변환시킬 **영단어를 미리 배열에 선언** 해 놓는 방식이다.<br>
  이렇게 된다면 **0번째 index에는 "zero"**가 들어가고 **9번째 index에는 "nine"**이 들어 가 있어 영단어를 변환하는 데 있어 좀 더 간편해졌다.<br><br>
- ![image](https://user-images.githubusercontent.com/77821550/187941201-30bc0213-8b4e-4ade-a0b5-5ec8e8a86098.png)<br><br>
+ ![image](https://user-images.githubusercontent.com/77821550/187941201-30bc0213-8b4e-4ade-a0b5-5ec8e8a86098.png)
+ > 인덱스 번호에 따른 단어들
+ <br><br>
 
  두번째로는 찾는 방식을 **siwtch**에서 string 맴버함수인 **find()**를 활용하여 더욱 간편하게 변경했다.<br>
 ```
@@ -85,12 +87,15 @@ if (nPos != string::npos)
 그리고 만약 문자열에 **없다면** **string::npos 의 값을 반환**한다고 한다.
 <br><br>
 
-마지막으로는 이 방식을 통해 값을 변환해줬다.<br><br>
-![image](https://user-images.githubusercontent.com/77821550/187948771-630fcc9e-7ba5-438a-99e8-ddcbe9af5e6f.png)<br><br>
-간단하게 소개하자면 
-string의 맴버함수인 replace는 문자열.replace(시작위치, 길이, 변경할 값) 이렇게 사용하면 시작위치에서부터 길이만큼의 값이 변경할 값으로 대체 된다.
-그래서 문자열에 영단어가 감지 된 경우는 그 감지된 위치를 알 수 있으니 그 정보를 활용하여 변환시켰다.
-그리고 i--는 중복 검색이 불가능 하여 다시 한번 똑같은 단어를 검색해보게 작성한 부분이다.
+그 후 string의 맴버함수인 **replace()** 를 활용하여 **문자열을 변경**해줬다.
+```
+s = s.replace(nPos, nums[i].length(), to_string(i));
+```
+이 함수는 다음과 같이 사용할 수 있다. `문자열.replace(시작위치, 길이, 변경할 값)` <br>
+설명하자면 **시작위치**에서부터 **길이만큼**의 **값**이 변경할 값으로 **대체** 된다.
+<br><br>
+
+그래서 **find**를 통해 영단어를 **찾고** 그 위치에 숫자를 **replace**를 사용해 **변경**해줬다.
 <br><br>
 
 #### 새롭게 알게된 점, 느낀점
