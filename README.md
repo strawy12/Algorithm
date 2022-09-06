@@ -7,15 +7,15 @@
 </div>
 
 ## 💻 [programmers](https://github.com/strawy12/Algorithm/blob/main/Programmers/README.md)
- 프로그래머스에서 제공하는 코딩테스트 연습 문제들이 있습니다.
+ **프로그래머스**에서 제공하는 코딩테스트 연습 문제들이 있습니다.
  
- c++ 문법 공부 위주로 활용하고있습니다.
+ c++ **문법 공부** 위주로 활용하고있습니다.
  <br><br>
  
 ## 🔠 [BaekJoon]
- 백준에서 제공하는 알고리즘 문제들이 있습니다.
+ **백준**에서 제공하는 알고리즘 문제들이 있습니다.
  
- 알고리즘 실력 증진용으로 활용할 예정입니다.
+ 알고리즘 **실력 증진용**으로 활용할 예정입니다.
  <br><br>
 
 ## 🏳 [기타](https://github.com/strawy12/Algorithm/tree/main/%EA%B8%B0%ED%83%80)
