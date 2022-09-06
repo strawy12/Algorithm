@@ -40,6 +40,7 @@
   
   #### 개선한 코드
   위와같은 코드를 작성한 이후 다른 방법을 여러가지 고민해보고 참고해보고 검색해본 결과 이러한 [코드](https://github.com/strawy12/Algorithm/blob/c88be9c2aed826842abbe96b3b2055fe800ee5cb/Programmers/%EC%88%AB%EC%9E%90%20%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B3%BC%20%EC%98%81%EB%8B%A8%EC%96%B4.cpp#L104)가 나오게 됐다<br><br>
+  
 ```
 int solution(string s) {
 	int answer = 0;
@@ -67,9 +68,13 @@ int solution(string s) {
  <br>
  
  우선 첫번째로 가장 크게 달라진 점은 변환시킬 **영단어를 미리 배열에 선언** 해 놓는 방식이다.<br>
- 이렇게 된다면 **0번째 index에는 "zero"**가 들어가고 **9번째 index에는 "nine"**이 들어 가 있어 영단어를 변환하는 데 있어 좀 더 간편해졌다.<br><br>
+ 
+ 이렇게 된다면 0번째 index에는 "zero"가 들어가고 9번째 index에는 "nine"이 들어 가 있어 영단어를 변환하는 데 있어 좀 더 간편해졌다.
+ <br><br>
+ 
  ![image](https://user-images.githubusercontent.com/77821550/187941201-30bc0213-8b4e-4ade-a0b5-5ec8e8a86098.png)
  > 인덱스 번호에 따른 단어들
+ 
  <br><br>
 
  두번째로는 찾는 방식을 **siwtch**에서 string 맴버함수인 **find()**를 활용하여 더욱 간편하게 변경했다.<br>
