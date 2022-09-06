@@ -72,20 +72,17 @@ int solution(string s) {
 
  두번째로는 찾는 방식을 **siwtch**에서 string 맴버함수인 **find()**를 활용하여 더욱 간편하게 변경했다.<br>
 ```
-    size_t nPos = s.find(nums[i]);
+size_t nPos = s.find(nums[i]);
 
-		if (nPos != string::npos)
-		{
-			s = s.replace(nPos, nums[i].length(), to_string(i));
-			i--;
-		}
+if (nPos != string::npos)
+{
+	s = s.replace(nPos, nums[i].length(), to_string(i));
+}
 ```
 <br>
 이 **find()** 함수는 `문자열.find("찾고자하는 문자열");` <br>
-이렇게 사용하게 된다면 찾고자하는 값이 문자열 안에 있다면 그 위치(index)를 반환하는 함수이다.
-그리고 만약 문자열에 없다면 string::npos 의 값을 반환한다고 한다.
-
-그래서 배열 안에 있는 값 하나하나 순회하면서 그 값이 문자열 안에 있는지 체크하고 있다.
+이렇게 사용하게 된다면 **찾고자하는 값**이 문자열 안에 있다면 그 **위치(index)를 반환**하는 함수이다.
+그리고 만약 문자열에 **없다면** **string::npos 의 값을 반환**한다고 한다.
 <br><br>
 
 마지막으로는 이 방식을 통해 값을 변환해줬다.<br><br>
