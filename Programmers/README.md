@@ -20,41 +20,69 @@
 <a href="https://school.programmers.co.kr/learn/courses/30/lessons/81301">문제 보기</a><br>
 <a href="https://github.com/strawy12/Algorithm/blob/main/Programmers/%EC%88%AB%EC%9E%90%20%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B3%BC%20%EC%98%81%EB%8B%A8%EC%96%B4.cpp">코드 보기</a>
 <br>
-🕑걸린 시간 : 1시간 이상
+🕑**걸린 시간** : 1시간 이상
 
   #### 문제 분석
-  이 문제는 문자열 안에 있는 숫자 영단어를 실제 숫자로 변환해줘야하는 문제이다.
+  이 문제는 문자열 안에 있는 **숫자 영단어**를 실제 **숫자**로 **변환**해줘야하는 문제이다.
   <br>
-  ex) "one23four" -> 1234, "zero82eight" -> 0828
+  `ex) "one23four" -> 1234, "zero82eight" -> 0828`
   
   
   #### 알고리즘 설계
-  우선 나는 처음으론 문자열을 전부 검색하여 숫자가 아닌 부분은 어떤 영단어인지 확인하여 변환해주는 if문 위주로 푸는 방식을 택했고 
-  변환한 값이 자릿수까지 맞춰질 수 있게 위치에 따라 10ⁿ을 곱하여 정수형으로 변환해주었다.
+  우선 나는 처음으론 **문자열을 전부 검색하여** 숫자가 아닌 부분은 어떤 영단어인지 확인하여 변환해주는 **if문 위주**로 푸는 방식을 택했고 
+  변환한 값이 **자릿수**까지 맞춰질 수 있게 위치에 따라 **10ⁿ을 곱하여** 정수형으로 변환해주었다.
   그렇게 나온 코드는 처참했다.<br><br>
-   <img src="https://user-images.githubusercontent.com/77821550/187939585-f4504265-8490-4f09-93e2-592315de3b76.png"  width="400" height="250"/>
+   <img src="https://user-images.githubusercontent.com/77821550/187939585-f4504265-8490-4f09-93e2-592315de3b76.png"  width="440" height="250"/>
 
   약 100줄이 되는 [코드](https://github.com/strawy12/Algorithm/blob/c88be9c2aed826842abbe96b3b2055fe800ee5cb/Programmers/%EC%88%AB%EC%9E%90%20%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B3%BC%20%EC%98%81%EB%8B%A8%EC%96%B4.cpp#L7)가 나오게 되었다. <br>
-  코드를 보시면 바로 알 수 있겠지만 매우 길고 가독성도 떨어지고 새로운 변환단어가 나오게된다면 유지보수하기에도 큰 어려움이 생길 수 있다.
+  코드를 보시면 바로 알 수 있겠지만 **매우 길고 가독성도 떨어지고** 새로운 변환단어가 나오게된다면 **유지보수**하기에도 **큰 어려움**이 생길 수 있다.
   <br>
   
   #### 개선한 코드
   위와같은 코드를 작성한 이후 다른 방법을 여러가지 고민해보고 참고해보고 검색해본 결과 이러한 [코드](https://github.com/strawy12/Algorithm/blob/c88be9c2aed826842abbe96b3b2055fe800ee5cb/Programmers/%EC%88%AB%EC%9E%90%20%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B3%BC%20%EC%98%81%EB%8B%A8%EC%96%B4.cpp#L104)가 나오게 됐다<br><br>
-   <img src="https://user-images.githubusercontent.com/77821550/187940139-d780f8c5-1e88-466e-9ac6-ef8b04464adf.png"  width="400" height="280"/>
+```
+int solution(string s) {
+	int answer = 0;
+	string nums[10] = { 
+		"zero","one","two","three","four",
+		"five","six","seven","eight", "nine" };
 
- 이 알고리즘은 위와 비슷한 구조로 되어있지만 좀 더 간단히 되어있다.
+	for (int i = 0; i < 10; i++)
+	{
+		size_t nPos = s.find(nums[i]);
+
+		if (nPos != string::npos)
+		{
+			s = s.replace(nPos, nums[i].length(), to_string(i));
+			i--;
+		}
+	}
+	
+	answer = stoi(s);
+	return answer;
+}
+```
+
+ 이 알고리즘은 위와 **비슷한 구조**로 되어있지만 좀 더 **간단히** 되어있다.
  <br>
  
- 우선 첫번째로 가장 크게 달라진 점은 변환시킬 영단어를 미리 배열에 선언 해 놓는 방식이다.
- 이렇게 된다면 0번째 index에는 "zero"가 들어가고 9번째 index에는 "nine"이 들어 가 있어 영단어를 변환하는 데 있어 좀 더 간편해졌다.<br><br>
+ 우선 첫번째로 가장 크게 달라진 점은 변환시킬 **영단어를 미리 배열에 선언** 해 놓는 방식이다.<br>
+ 이렇게 된다면 **0번째 index에는 "zero"**가 들어가고 **9번째 index에는 "nine"**이 들어 가 있어 영단어를 변환하는 데 있어 좀 더 간편해졌다.<br><br>
  ![image](https://user-images.githubusercontent.com/77821550/187941201-30bc0213-8b4e-4ade-a0b5-5ec8e8a86098.png)<br><br>
 
- 두번째로는 찾는 방식을 반복문으로 간편하게 변경했다.
- 이 부분을 보시면 <br><br>
- ![image](https://user-images.githubusercontent.com/77821550/187942164-0f5724bf-37a4-4b97-b9de-def5a58b0610.png)
-<br><br>
-string 맴버함수인 find()를 활용했다.
-이 함수는 문자열.find("찾고자하는 문자열") 이렇게 사용하게 된다면 찾고자하는 값이 문자열 안에 있다면 그 위치(index)를 반환하는 함수이다.
+ 두번째로는 찾는 방식을 **siwtch**에서 string 맴버함수인 **find()**를 활용하여 더욱 간편하게 변경했다.<br>
+```
+    size_t nPos = s.find(nums[i]);
+
+		if (nPos != string::npos)
+		{
+			s = s.replace(nPos, nums[i].length(), to_string(i));
+			i--;
+		}
+```
+<br>
+이 **find()** 함수는 `문자열.find("찾고자하는 문자열");` <br>
+이렇게 사용하게 된다면 찾고자하는 값이 문자열 안에 있다면 그 위치(index)를 반환하는 함수이다.
 그리고 만약 문자열에 없다면 string::npos 의 값을 반환한다고 한다.
 
 그래서 배열 안에 있는 값 하나하나 순회하면서 그 값이 문자열 안에 있는지 체크하고 있다.
