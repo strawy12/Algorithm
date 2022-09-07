@@ -263,5 +263,13 @@ while (temp.size() < 3)
 ##### 새롭게 알게된 점, 느낀점
 새로 알게 된 점: transform(), tolower(), toupper(), substr(), strchr() 에 대한 함수를 알았다.
 느낀점: 코드를 짤 때 무작정 짜지말고 가독성 좋게 짜보도록 노력하는게 좋을거같다. 그리고 아직 내가 모르는 함수가 많이 존재하는 거 같다.
-
+<br><br>
   
+### ❗신고 결과 받기
+[돌아가기](https://github.com/strawy12/Algorithm/blob/main/Programmers/README.md#progammers)
+ <br> <br> 
+ 
+<a href="https://school.programmers.co.kr/learn/courses/30/lessons/92334">문제 보기</a><br>
+<a href="https://github.com/strawy12/Algorithm/blob/main/Programmers/%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0.cpp">코드 보기</a>
+<br>
+🕑**걸린 시간** : 3시간 이상
