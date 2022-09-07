@@ -273,3 +273,17 @@ while (temp.size() < 3)
 <a href="https://github.com/strawy12/Algorithm/blob/main/Programmers/%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0.cpp">코드 보기</a>
 <br>
 🕑**걸린 시간** : 3시간 이상
+
+#### 문제 분석
+이 문제는 유저를 신고하고 한 유저가 신고를 당하면 그 유저는 정지를 당하고 신고한 유저에게 메일이 발송되는(신고하신 유저가 정지를 당했다) 문제이다.<br>
+
+![image](https://user-images.githubusercontent.com/77821550/188811606-604ab137-1c90-4a96-8310-1968cf7e8b22.png) <br>
+![image](https://user-images.githubusercontent.com/77821550/188811577-1d4adb0c-b0c4-492e-81fe-b58ec50eb28e.png) <br>
+![image](https://user-images.githubusercontent.com/77821550/188811643-57cdf33f-f9b7-4aa4-927b-25350ac8798a.png) <br>
+
+
+
+
+
+
+
