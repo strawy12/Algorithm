@@ -7,4 +7,4 @@
 </div> <br>
 
 ## 바로가기
-[문법 정리](https://github.com/strawy12/Algorithm/blob/main/%EA%B8%B0%ED%83%80/Tip_README.md)
+[💌문법 정리](https://github.com/strawy12/Algorithm/blob/main/%EA%B8%B0%ED%83%80/Tip_README.md)
