@@ -19,7 +19,7 @@ int solution(string s) {
 		else
 		{
 			switch (c)
-			{
+			{	
 			case 'z':
 				s_Answer += '0';
 				i += 4;

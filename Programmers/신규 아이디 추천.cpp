@@ -1,5 +1,6 @@
 	#include <string>
 	#include <vector>
+	#include <algorithm>
 
 	using namespace std;
 
@@ -44,7 +45,6 @@
 					break;
 				}
 			}
-
 		}
 
 		if (answer.front() == '.')
@@ -82,13 +82,7 @@
 		string temp = "";
 
 		// 1 대문자 -> 소문자
-		for (char& c : new_id)
-		{
-			if ('A' <= c && c <= 'Z')
-			{
-				c = tolower(c);
-			}
-		}
+		transform(new_id.begin(), new_id.end(), new_id.begin(), ::tolower);
 		
 		// 2 특정 글자만 유지
 		for (char& c : new_id)
@@ -101,7 +95,7 @@
 			}
 		}
 		// 변환한 값 대입 후  temp변수 초기화
-		new_id = temp;
+		new_id = temp;	
 		temp.clear();
 
 		// 3 마침표(.)가 2번 이상 연속된 부분 삭제
@@ -113,8 +107,8 @@
 		}
 		
 		// 4 모든 작업 후 맨앞과 뒤에 .이 있다면 삭제
-		if (temp.front() == '.') temp.erase(temp.begin());
-		if (temp.back() == '.') temp.erase(temp.end() - 1);
+			if (temp.front() == '.') temp.erase(temp.begin());
+			if (temp.back() == '.') temp.erase(temp.end() - 1);
 
 		// 5 문자열이 비어있다면 a 대입
 		if (temp.empty()) temp = "a";

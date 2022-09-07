@@ -5,21 +5,6 @@
 #include <map>
 
 using namespace std;
-vector<int> solution(vector<string> id_list, vector<string> reports, int k);
-
-int main()
-{
-	vector<string> id_list = { "muzi", "frodo", "apeach", "neo" };
-	vector<string> reports = { "muzi frodo", "apeach frodo", "frodo neo", "muzi neo", "apeach muzi" };
-	
-	auto v = solution(id_list, reports, 2);
-
-	for (auto s : v)
-	{
-		cout << s << " ";
-	}
-}
-
 
 vector<int> solution(vector<string> id_list, vector<string> reports, int k) {
 	int size = id_list.size();

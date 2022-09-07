@@ -19,6 +19,9 @@
     <Filter Include="소스 파일\Backjoon">
       <UniqueIdentifier>{67508e12-de05-4194-b1f2-c95406a04529}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\자료구조">
+      <UniqueIdentifier>{9e85eccf-a7f7-4ec0-b203-afa5f9dfb37e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="로또의 최고 순위와 최저 순위.cpp">
@@ -48,11 +51,14 @@
     <ClCompile Include="Programmers\신규 아이디 추천.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
-    <ClCompile Include="신고결과받기.cpp">
-      <Filter>소스 파일\Programmers</Filter>
-    </ClCompile>
     <ClCompile Include="Programmers\같은 숫자는 싫어.cpp">
       <Filter>소스 파일\Programmers</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers\신고결과받기.cpp">
+      <Filter>소스 파일\Programmers</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>소스 파일\자료구조</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
