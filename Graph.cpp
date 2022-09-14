@@ -1,4 +1,5 @@
 #include <iostream>
+#include <queue>
 #include <vector>
 using namespace std;
 #define MAX_VTXS 256
@@ -50,7 +51,7 @@ public:
 };
 class SearchGraph : public AdjMatGraph
 {
-	bool visited[MAX_VTXS];
+	int visited[MAX_VTXS];
 
 public:
 	void resetVisited()
@@ -78,12 +79,43 @@ public:
 		}	
 
 	}
+
+	void BFS(int v)
+	{
+		fill_n(visited, MAX_VTXS, -1);
+		visited[v] = 0;
+
+		queue<char> q;
+		q.push(v);
+
+		while (!q.empty())
+		{
+			int iv = q.front();
+			cout << getVertex(iv) << " ";
+			q.pop();
+
+			for (int i = 0; i < size; i++)
+			{
+				if (isLinked(iv, i) && visited[i] < 0)
+				{
+					visited[i] = visited[iv] + 1;
+					q.push(i);
+				}
+			}
+		}
+
+		cout << endl << "A에서 각 정점까지의 거리 : ";
+		for (int i = 0; i < size; i++)
+		{
+			cout << " " << visited[i];
+		}
+	}
 };
 int main()
 {
 	SearchGraph g;
 
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 4; i++)	
 		g.insertVertex('A' + i);
 
 	g.insertEdge(0, 1);
@@ -94,9 +126,7 @@ int main()
 
 	cout << "인접 행렬로 표현한 그래프" << endl;
 	g.display();
-	cout << "DFS 탐색 => ";
-	g.resetVisited();
-	g.DFS(0);
+	g.BFS(0);
 }
 
 //class AdjMatGraph
