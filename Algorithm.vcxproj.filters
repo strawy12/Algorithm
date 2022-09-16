@@ -60,7 +60,10 @@
     <ClCompile Include="Graph.cpp">
       <Filter>소스 파일\자료구조</Filter>
     </ClCompile>
-    <ClCompile Include="2178 미로탐색.cpp">
+    <ClCompile Include="1012 유기농배추.cpp">
+      <Filter>소스 파일\Backjoon</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon\2178 미로탐색.cpp">
       <Filter>소스 파일\Backjoon</Filter>
     </ClCompile>
   </ItemGroup>
