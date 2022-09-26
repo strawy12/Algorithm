@@ -9,7 +9,7 @@
 <br><br>
 
 [🔠🔢 숫자 문자열과 영단어](https://github.com/strawy12/Algorithm/blob/main/Programmers/README.md#-%EC%88%AB%EC%9E%90-%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B3%BC-%EC%98%81%EB%8B%A8%EC%96%B4) <br>
-[🔓신규 아이디 추천](https://github.com/strawy12/Algorithm/blob/main/Programmers/README.md#%EC%8B%A0%EA%B7%9C-%EC%95%84%EC%9D%B4%EB%94%94-%EC%B6%94%EC%B2%9C)
+[🔓신규 아이디 추천](https://github.com/strawy12/Algorithm/blob/main/Programmers/README.md#%EC%8B%A0%EA%B7%9C-%EC%95%84%EC%9D%B4%EB%94%94-%EC%B6%94%EC%B2%9C) <br>
 [❗신고 결과 받기](https://github.com/strawy12/Algorithm/edit/main/Programmers/README.md#%EC%8B%A0%EA%B3%A0-%EA%B2%B0%EA%B3%BC-%EB%B0%9B%EA%B8%B0)
 <br><br>
 
@@ -301,9 +301,11 @@ vector<vector<string>> reporters(size);
 > reports.erase(unique(reports.begin(), reports.end()), reports.end());
 <br>
 이 방식은 unique 를 알아야 이해할 수 있다.
-unique 함수는 연속된 중복 원소를 vector의 제일 뒷부분으로 쓰레기값으로 채워 넣는 함수이다.<br>
-![image](https://user-images.githubusercontent.com/77821550/192171392-5146de11-f65e-4811-8c38-56e18d6cee7b.png)
+unique 함수는 연속된 중복 원소를 vector의 제일 뒷부분으로 쓰레기값으로 채워 넣는 함수이다.<br><br>
+	
+<img src="https://user-images.githubusercontent.com/77821550/192171392-5146de11-f65e-4811-8c38-56e18d6cee7b.png"  width="457" height="259"/>
 <br>
-
 빨간 박스에 들어간 end는 unique 한 이후의 end 값이고 이를 리턴하게 된다. <br>
-그렇기에 unique의 리턴값부터 실제 vector의 end까지 삭제한다고 하면 중복값들이 모두 사라지는 것을 볼 수 있다.
+그렇기에 unique의 리턴값부터 실제 vector의 end까지 삭제한다고 하면 중복값들이 모두 사라지는 것을 볼 수 있다.<br>
+<br>	
+
