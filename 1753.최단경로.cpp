@@ -16,24 +16,25 @@ vector<int> dijkstra(int start, int vertex)
 
 	while (!pq.empty())
 	{
-		int now = pq.top().second;
-		int sToNow = pq.top().first;
+		int now = pq.top().second; // 1
+		int sToNow = pq.top().first; // 0
 		pq.pop();
 
-		if (dist[now] != sToNow) continue;
+		if (dist[now] != sToNow) continue; //  true
 
-		for (auto n : weight[now])
+		for (auto n : weight[now]) // 1번째 간선
 		{
-			int neighbor = n.second;
-			int NowToNeighbor = n.first;
+			int neighbor = n.second; // 2
+			int NowToNeighbor = n.first; // 2
 
-			if ()
+			if (dist[neighbor] > NowToNeighbor + dist[now])
 			{
+				dist[neighbor] = NowToNeighbor + dist[now];
 				pq.push(make_pair(dist[neighbor], neighbor));
 			}
 		}
 	}
-
+	return dist;
 }
 
 int main()
@@ -50,5 +51,20 @@ int main()
 		weight[u].emplace_back(w, v);
 	}
 
-	vector<int> result = 
+	vector<int> result = dijkstra(start, V + 1);
+
+	for (int i = 1; i <= V; i++)
+	{
+		if (result[i] == INF)
+		{
+			cout << "INF\n" ;
+		}
+
+		else
+		{
+			cout <<result[i] << "\n";
+		}
+
+
+	}
 }

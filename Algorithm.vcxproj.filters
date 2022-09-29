@@ -69,5 +69,8 @@
     <ClCompile Include="사잇값 구하기.cpp">
       <Filter>소스 파일\자료구조</Filter>
     </ClCompile>
+    <ClCompile Include="1753.최단경로.cpp">
+      <Filter>소스 파일\Backjoon</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
