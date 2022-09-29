@@ -178,7 +178,7 @@ int solution(string s) {
 이 코드의 **문제점**은 조건 별로 함수나 위치를 나누지 않고 **뒤죽박죽으로 작성**했다보니 **가독성**이 매우 **떨어진다**. 또한 **조건 유효성 검사**도 **위치**가 **제각각**이라 추후 **유지 보수에 큰 어려움**을 느낄것으로 보인다.
   
   #### 개선된 코드
-  ※ 여기서 개선된 코드는 내가 혼자 생각한것이 아닌 다른 분이 푸신 것을 참고하여 작성했습니다.<br>
+  ※ 여기서 개선된 코드는 프로그래머스의 다른 분들의 풀이를 참고하여 작성했습니다.<br>
   [해당 코드 바로가기](https://github.com/strawy12/Algorithm/blob/964c57905bcb20772b1a824dc1cc730578728fdb/Programmers/%EC%8B%A0%EA%B7%9C%20%EC%95%84%EC%9D%B4%EB%94%94%20%EC%B6%94%EC%B2%9C.cpp#L81)
   
   가장 먼저 **개선**해야겠다고 생각되었던 부분은 **가독성 부분**이다.<br>
@@ -191,7 +191,7 @@ int solution(string s) {
   ```
   <br><br>
   
-  2. **특정 문자들을 제외한 모든 문자를 제거** <br>
+  1. **특정 문자들을 제외한 모든 문자를 제거** <br>
   이 부분은 **for문**으로 문자열을 차례대로 **순회**하면서 **if문**으로 조건을 걸어줬다.
   
   ```cpp
@@ -294,18 +294,95 @@ vector<vector<string>> reporters(size);
  변수는 이렇게 선언 했다.
  위에서부터 map을 사용하여 사용자 id에 따른 인덱스를 얻을 수 있는 맵을 선언하고 <br>
  신고 당한 횟수를 저장하는 vector와 신고 결과를 받은 횟수를 저장할 vector를 선언했다 <br>
- 마지막으로 vector<vector> 를 사용하여 어떤 사용자가 신고했는지 저장하는 변수도 선언했다.
+
+ 마지막으로 `vector<vector>` 를 사용하여 어떤 사용자가 신고했는지 저장하는 변수도 선언했다.
  <br><br>
 
 가장 우선 한 사용자가 동일 인물을 중복으로 신고하는 것을 막아야하는 데 이 부분을 간단한 방법을 사용해서 해결했다.
+
 > reports.erase(unique(reports.begin(), reports.end()), reports.end());
+
 <br>
-이 방식은 unique 를 알아야 이해할 수 있다.
+신고는 "신고자 신고할 아이디" 양식으로 값이 들어오기에 중복 신고라면 중복 값이 있을 것이다. 그렇기에 unique 를 사용했다 <br><br>
+
 unique 함수는 연속된 중복 원소를 vector의 제일 뒷부분으로 쓰레기값으로 채워 넣는 함수이다.<br><br>
 	
 <img src="https://user-images.githubusercontent.com/77821550/192171392-5146de11-f65e-4811-8c38-56e18d6cee7b.png"  width="457" height="259"/>
-<br>
+<br><br>
 빨간 박스에 들어간 end는 unique 한 이후의 end 값이고 이를 리턴하게 된다. <br>
 그렇기에 unique의 리턴값부터 실제 vector의 end까지 삭제한다고 하면 중복값들이 모두 사라지는 것을 볼 수 있다.<br>
-<br>	
+<br>
+
+``` cpp
+for (string report : reports)
+	{
+		int nPos = report.find(" ");
+        // 신고자와 신고당한 아이디를 두 변수로 나눈다
+		string reporter = report.substr(0, nPos);
+		string reported = report.substr(nPos + 1, report.length() - nPos);
+
+        // 신고 당한 아이디의 Index를 가져온다
+		int idx = id_idx[reported];
+
+		bool isBoth = false;
+		for (auto r : reporters[idx])
+		{
+           // 만약 중복 신고라면 bool 변수를 true
+			if (reporter == r)
+			{
+				isBoth = true;
+				
+				break;
+			}
+		}
+
+        // 중복 신고가 아닌 경우
+		if (!isBoth)
+		{
+			reporters[idx].push_back(reporter);
+			reportedCnt[idx]++;
+		}
+	}
+```
+<br>
+
+여기서 문제가 생긴다. 분명 우리는 중복 신고를 막기 위해 unique 함수를 사용했는데 이렇게 한번 더 중복 신고를 막아줘야 테스트를 통과할 수 있다.
+<br><br>
+
+
+#### 개선된 코드
+※ 해당 코드는 우노님의 블로그를 참고하여 제작했습니다.  
+[개선된 코드]() <br>
+[참고한 사이트](https://wooono.tistory.com/465)
+<br>
+
+우선 가장 먼저 바뀐 부분은 변수 부분이다.
+``` cpp
+	map<string, int> id_idx;
+	vector<int> answer(size, 0);
+	map<string, set<string>> reporters;
+```
+기존에 `vector<vector>` 였던 자료형을 `map<string, set<string>>` 로 변경하였다. 여기서 set을 사용한 이유는 set은 중복된 값이 들어오지도 않고 들어와도 삭제하는 기능이 있습니다.<br>
+이를 사용하여 중복 신고를 방지를 손 쉽게 할 수 있다.
+<br><br>
+그리고 for문이 매우 간략해졌다.
+``` cpp
+for (string report : reports)
+{
+	stringstream ss(report);
+	string from, to;
+	ss >> from >> to;
+
+	reporters[to].insert(from);
+}
+  ```
+  <br>
+  여기서 크게 변경된 점은 stringstream 부분이다. <br>
+  이 stringstream은 주어진 문자열에서 필요한 자료형에 맞는 정보를 꺼낼 때 유용하다고 하는데 <br>
+  나는 여기서 문자열을 나눌 때 사용을 하였다. <br>
+  from에는 공백 기준으로 앞의 문자열의 값, 
+  to에는 뒤의 문자열의 값이 들어간다.
+<br>
+
+>ex) "DEV OIF" /  from = "DEV", to = "OIF"
 

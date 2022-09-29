@@ -1,8 +1,10 @@
 #include <iostream>
 #include <queue>
 #include <vector>
+#include <stack>
 using namespace std;
 #define MAX_VTXS 256
+#define INFINITE 9999
 
 class AdjMatGraph
 {
@@ -28,7 +30,7 @@ public:
 
 		for (int i = 0; i < MAX_VTXS; i++)
 			for (int j = 0; j < MAX_VTXS; j++)
-				setEdge(i, j, 9999);
+				setEdge(i, j, INFINITE);
 	}
 
 
@@ -116,13 +118,14 @@ class ShortestGragh : public AdjMatGraph
 {
 	int dist[MAX_VTXS];
 	bool founds[MAX_VTXS];
+	int parent[MAX_VTXS];
 
 public:
 	void printDist()
 	{
 		for (int i = 0; i < size; i++)
 		{
-			if (dist[i] == 9999)
+			if (dist[i] == INFINITE)
 			{
 				cout << "I ";
 			}
@@ -151,34 +154,69 @@ public:
 		return minPos;
 	}
 
-	void dijikstra(int start)
+	void dijikstra(int start, int end)
 	{
 		for (int i = 0; i < size; i++)
 		{
 			dist[i] = getEdge(start, i);
 			founds[i] = false;
 		}
-
+		fill_n(parent, size, -1);
 		founds[start] = true;
 		dist[start] = 0;
+		parent[start] = start;
+
+		int next = -1, current = start;
+
 
 		for (int i = 0; i < size; i++)
 		{
+			if (next == end)
+			{
+				cout << "목적 정점 " << end << "에 도착!" << endl;
+				break;
+			}
+
 			cout << "Step " << i + 1 << " : ";
 			printDist();
+			next = chooseVertex();
 
-			int u = chooseVertex();
-			founds[u] = true;
+			if (i == 0)
+			{
+				parent[next] = start;
+
+			}
+
+			cout << current << "정점에서 시작!" << endl;
+			founds[next] = true;
 
 			for (int w = 0; w < size; w++)
 			{
-				if (!founds[w] && dist[u] + adj[u][w] < dist[w])
-				{
-					dist[w] = dist[u] + adj[u][w];
-				}
+				if (!founds[w])
+					if (dist[next] + getEdge(next, w) < dist[w])
+					{
+						dist[w] = dist[next] + getEdge(next, w);
+						parent[w] = next;
+
+					}
 			}
+			current = next;
 		}
 	}
+
+	void PrintPath(int start, int target)
+	{
+		if (start == target)
+		{
+			cout << "최단 경로는 " << start;
+			return;
+		}
+		PrintPath(start, parent[target]);
+		cout << " " << target;
+
+	}
+
+
 };
 
 int main()
@@ -187,25 +225,18 @@ int main()
 
 	g.reset();
 
-	for (int i = 0; i < 7; i++)
+	for (int i = 0; i < 4; i++)
 		g.insertVertex('A' + i);
 
-	g.insertEdge(0, 1, 1); // A B : 1
-	g.insertEdge(0, 2, 2); // A C : 2
-	g.insertEdge(1, 2, 4);
-	g.insertEdge(0, 3, 8);
-	g.insertEdge(1, 4, 3);
-	g.insertEdge(1, 5, 5);
-	g.insertEdge(2, 3, 3);
-	g.insertEdge(2, 5, 6);
-	g.insertEdge(3, 5, 7);
-	g.insertEdge(3, 6, 8);
-	g.insertEdge(4, 5, 10);
-	g.insertEdge(5, 6, 9);
+	g.insertEdge(0, 1, 2); // A B : 1
+	g.insertEdge(0, 2, 7);
+	g.insertEdge(1, 2, 1);
+	g.insertEdge(1, 3, 3);
+	g.insertEdge(3, 2, 2);
 
 	//cout << "인접 행렬로 표현한 그래프" << endl;
 	//g.display();
-	g.dijikstra(0);
+	g.dijikstra(0, 2);
 }
 
 //class AdjMatGraph

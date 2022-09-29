@@ -2,7 +2,9 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <set>
 #include <map>
+#include <sstream>
 
 using namespace std;
 
@@ -35,7 +37,7 @@ vector<int> solution(vector<string> id_list, vector<string> reports, int k) {
 			if (reporter == r)
 			{
 				isBoth = true;
-				
+
 				break;
 			}
 		}
@@ -59,6 +61,40 @@ vector<int> solution(vector<string> id_list, vector<string> reports, int k) {
 		}
 	}
 
+
+	return answer;
+}
+
+vector<int> solution(vector<string> id_list, vector<string> reports, int k) {
+	int size = id_list.size();
+
+	map<string, int> id_idx;
+	vector<int> answer(size, 0);
+	map<string, set<string>> reporters;
+
+	for (int i = 0; i < id_list.size(); i++)
+	{
+		id_idx.insert({ id_list[i],i });
+	}
+
+	reports.erase(unique(reports.begin(), reports.end()), reports.end());
+
+	for (string report : reports)
+	{
+		stringstream ss(report);
+		string from, to;
+		ss >> from >> to;
+
+		reporters[to].insert(from);
+	}
+
+	for (auto iter : reporters) {
+		if (iter.second.size() >= k) {
+			for (auto in_iter : iter.second) {
+				answer[id_idx[in_iter]]++;
+			}
+		}
+	}
 
 	return answer;
 }
