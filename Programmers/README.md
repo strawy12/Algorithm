@@ -384,5 +384,9 @@ for (string report : reports)
   to에는 뒤의 문자열의 값이 들어간다.
 <br>
 
->ex) "DEV OIF" /  from = "DEV", to = "OIF"
+>ex) "DEV OIF" >> from = "DEV", to = "OIF"
+<br>
 
+이 두가지를 활용하여 푸니 매우 간략화된 코드를 만들 수 있게 됐다.
+
+##### 새롭게 알게된 점, 느낀점
