@@ -36,9 +36,6 @@
     <ClCompile Include="최소 직사각형.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
-    <ClCompile Include="크레인 인형뽑기 게임.cpp">
-      <Filter>소스 파일\Programmers</Filter>
-    </ClCompile>
     <ClCompile Include="키패드 누르기.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
@@ -71,6 +68,18 @@
     </ClCompile>
     <ClCompile Include="1753.최단경로.cpp">
       <Filter>소스 파일\Backjoon</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers\크레인 인형뽑기 게임.cpp">
+      <Filter>소스 파일\Programmers</Filter>
+    </ClCompile>
+    <ClCompile Include="Union-Find.cpp">
+      <Filter>소스 파일\자료구조</Filter>
+    </ClCompile>
+    <ClCompile Include="Prim.cpp">
+      <Filter>소스 파일\자료구조</Filter>
+    </ClCompile>
+    <ClCompile Include="자구 수행.cpp">
+      <Filter>소스 파일\자료구조</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

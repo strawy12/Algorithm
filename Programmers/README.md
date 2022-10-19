@@ -10,7 +10,7 @@
 
 [🔠🔢 숫자 문자열과 영단어](https://github.com/strawy12/Algorithm/blob/main/Programmers/README.md#-%EC%88%AB%EC%9E%90-%EB%AC%B8%EC%9E%90%EC%97%B4%EA%B3%BC-%EC%98%81%EB%8B%A8%EC%96%B4) <br>
 [🔓신규 아이디 추천](https://github.com/strawy12/Algorithm/blob/main/Programmers/README.md#%EC%8B%A0%EA%B7%9C-%EC%95%84%EC%9D%B4%EB%94%94-%EC%B6%94%EC%B2%9C) <br>
-[❗신고 결과 받기](https://github.com/strawy12/Algorithm/edit/main/Programmers/README.md#%EC%8B%A0%EA%B3%A0-%EA%B2%B0%EA%B3%BC-%EB%B0%9B%EA%B8%B0)
+[❗신고 결과 받기](https://github.com/strawy12/Algorithm/blob/main/Programmers/README.md#%EC%8B%A0%EA%B3%A0-%EA%B2%B0%EA%B3%BC-%EB%B0%9B%EA%B8%B0)
 <br><br>
 
 ## 알고리즘 노트
@@ -390,3 +390,52 @@ for (string report : reports)
 이 두가지를 활용하여 푸니 매우 간략화된 코드를 만들 수 있게 됐다.
 
 ##### 새롭게 알게된 점, 느낀점
+새로 알게 된 점: stringstream, set 에 대한 개념을 새롭게 알았다. <br>
+느낀점: c++ 에 대해 문법을 어느정도 알고있다고 생각했는데 실제로 활용할 수 있는 것들은 내 생각보다 더욱 다양한 것 같다. 다양한 문법들을 새롭게 알게되서 좋았던 것 같다.
+
+<br><br>
+  
+### 🏗️ 크레인 인형뽑기 게임
+ [돌아가기](https://github.com/strawy12/Algorithm/blob/main/Programmers/README.md#progammers)
+ <br> <br> 
+ 
+<a href="https://school.programmers.co.kr/learn/courses/30/lessons/64061">문제 보기</a><br>
+<a href="https://github.com/strawy12/Algorithm/blob/main/Programmers/%ED%81%AC%EB%A0%88%EC%9D%B8%20%EC%9D%B8%ED%98%95%EB%BD%91%EA%B8%B0%20%EA%B2%8C%EC%9E%84.cpp">코드 보기</a>
+<br>
+🕑**걸린 시간** : 1시간 이내
+
+  #### 문제 분석
+  <img src="https://user-images.githubusercontent.com/77821550/194195330-9151c564-5de7-482b-b022-934c94255862.png"  width="300" height="300"/>
+<br>
+위 사진 처럼 Board 안에 인형이 차곡차곡 쌓여져 있고 크레인이 이를 옮겨 오른쪽 바구니로 이동 시키는 인형뽑기 느낌의 구조였다. <br>
+여기서 특별한? 규칙이 하나 있는데 그것은 오른쪽 바구니에 똑같은 인형이 두개가 연속적으로 놓아지게 된다면 그 인형이 터지게 되고 우리는 인형이 터진 횟수를 구해야한다.
+<br><br>
+
+
+  #### 알고리즘 설계
+ 여기서 이 그림을 보자마자 Stack을 사용해야할 거 같다는 생각을 하게 되었다. 그래서 바구니를 Stack을 사용해 변수를 선언했다. <br>
+ `stack<int> basket;`
+ <br> <br>
+ 우선 문제를 풀기 위해서는 인형들을 이동 시켜야하는데 이 이동을 담은 변수가 moves에 담아져있어 moves의 모든 요소들을 탐색해서 작업하는 방식으로 설계해봤다.
+ 
+ ```cpp
+for (int i = 0; i < board.size(); i++)
+		{
+			if (board[i][n - 1] != 0)
+			{
+				doll = board[i][n - 1];
+				board[i][n - 1] = 0;
+				break;
+			}
+		}
+ ```
+
+  
+  #### 개선된 코드
+
+<br><br>
+
+##### 새롭게 알게된 점, 느낀점
+
+<br><br>
+  
