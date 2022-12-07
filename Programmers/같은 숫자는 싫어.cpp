@@ -23,10 +23,10 @@ vector<int> solution(vector<int> arr)
 }
 
 // 새롭게 알게된 방식
-vector<int> solution(vector<int> arr)
-{
-    arr.erase(unique(arr.begin(), arr.end()), arr.end());
+    vector<int> solution(vector<int> arr)
+    {
+        arr.erase(unique(arr.begin(), arr.end()), arr.end());
 
-    vector<int> answer = arr;
-    return answer;
-}
+        vector<int> answer = arr;
+        return answer;
+    }

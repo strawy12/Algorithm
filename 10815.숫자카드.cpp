@@ -3,7 +3,6 @@
 using namespace std;
 
 unordered_set<int> us;
-bool arr[500000] = { false, };
 
 int main()
 {
@@ -11,6 +10,7 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 
+	string ans = "";
 	int n, m;
 
 
@@ -30,12 +30,11 @@ int main()
 
 		if (us.find(num) != us.end())
 		{
-			arr[i] = true;
+			cout << 1 << ' ';
 		}
-	}
-
-	for (int i = 0; i < m; i++)
-	{
-		cout << arr[i] << ' ';
+		else
+		{
+			cout << 0 << ' ';
+		}
 	}
 }

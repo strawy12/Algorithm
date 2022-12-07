@@ -4,7 +4,6 @@
 #include <unordered_set>
 using namespace std;
 
-int solution(vector<int> nums);
 bool ComperePonketMon(int num, vector<int>& vPonketmon);
 
 int main()
@@ -59,3 +58,28 @@ bool ComperePonketMon(int num, vector<int>& vPonketmon)
 
 	return false;
 }
+
+int solution(vector<int> nums)
+{
+
+	int answer = 0;
+
+	int selectCnt = nums.size() / 2;
+
+	sort(nums.begin(), nums.end());
+	nums.erase(unique(nums.begin(), nums.end()), nums.end());
+	int ponketmonCnt = nums.size();
+
+	if (ponketmonCnt <= selectCnt)
+	{
+		answer = ponketmonCnt;
+	}
+
+	else
+	{
+		answer = selectCnt;
+	}
+
+	return answer;
+}
+

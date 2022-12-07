@@ -5,55 +5,53 @@
 #include <vector>
 using namespace std;
 
+vector<int> solution(vector<int> lottos, vector<int> win_nums);
+void main()
+{
+    auto a = solution({ 1, 2, 3, 4, 5, 6 }, { 7, 8, 9, 10, 11, 12 });
+    cout << a[0] << " " << a[1];
+}
 
 vector<int> solution(vector<int> lottos, vector<int> win_nums) {
 
-    int cnt = 0;
-    int zeroCnt = 0;
-    for (int i = 0; i < lottos.size(); i++)
+    int containCnt = 0;
+    int invisableCnt = 0;
+
+    for (int n : lottos)
     {
-        if (lottos[i] == 0)
+        if (n == 0)
         {
-            zeroCnt++;
+            invisableCnt++;
             continue;
         }
 
-        for (int j = 0; j < win_nums.size(); j++)
+        for (int wn : win_nums)
         {
-            if (lottos[i] == win_nums[j])
+            if (n == wn)
             {
-                cnt++;
-                win_nums.erase(win_nums.begin() + j);
+                containCnt++;
+                break;
             }
         }
-
     }
 
-    int minRank, maxRank;
+    // 전체 맞아야하는 갯수 - 맞은 갯수 + 1 = 순위
+    // 6개 맞았다면 -> 6 - 6 + 1 = 1위
+    // 5개 맞았다면 -> 6 - 5 + 1 = 2위
+    // 4개 맞았다면 -> 6 - 4 + 1 = 3위
+    // 3개 맞았다면 -> 6 - 3 + 1 = 4위
+    // 2개 맞았다면 -> 6 - 2 + 1 = 5위
 
-    if (cnt < 2)
-    {
-        minRank = 6;
-    }
+    // 전체 맞아야하는 갯수 - 맞은 갯수(나머지는 모두 안 맞았다는 가정) + 1 = 순위
+    int minRank = (6 - containCnt) + 1;
 
-    else
-    {
-        minRank = 6 - cnt + 1;
-    }
+    // 1개 이하 맞으면 무조건 6위(낙첨)
+    minRank = minRank > 6 ? 6 : minRank;
 
-    if (zeroCnt + cnt < 2)
-    {
-        maxRank = 6;
-    }
+    // 전체 맞아야하는 갯수 - 맞은 갯수(나머지는 모두 맞았다는 가정) + 1 = 순위
+    int maxRank = (6 - (containCnt + invisableCnt)) + 1;
+    minRank = minRank > 6 ? 6 : minRank;
+    maxRank = maxRank > 6 ? 6 : maxRank;
 
-    else
-    {
-        maxRank = 6 - (zeroCnt + cnt) + 1;
-    }
-
-    vector<int> answer;
-    answer.push_back(maxRank);
-    answer.push_back(minRank);
-
-    return answer;
+    return vector<int> {maxRank, minRank};
 }

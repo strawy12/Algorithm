@@ -24,9 +24,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="로또의 최고 순위와 최저 순위.cpp">
-      <Filter>소스 파일\Programmers</Filter>
-    </ClCompile>
     <ClCompile Include="Programmers\성격 유형 검사하기.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
@@ -113,6 +110,15 @@
     </ClCompile>
     <ClCompile Include="10815.숫자카드.cpp">
       <Filter>소스 파일\Backjoon</Filter>
+    </ClCompile>
+    <ClCompile Include="10816.숫자카드2.cpp">
+      <Filter>소스 파일\Backjoon</Filter>
+    </ClCompile>
+    <ClCompile Include="1072.게임.cpp">
+      <Filter>소스 파일\Backjoon</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers\로또의 최고 순위와 최저 순위.cpp">
+      <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
