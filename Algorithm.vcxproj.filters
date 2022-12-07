@@ -120,5 +120,11 @@
     <ClCompile Include="Programmers\로또의 최고 순위와 최저 순위.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
+    <ClCompile Include="9461.파도반 수열.cpp">
+      <Filter>소스 파일\Backjoon</Filter>
+    </ClCompile>
+    <ClCompile Include="1463.1로 만들기.cpp">
+      <Filter>소스 파일\Backjoon</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
