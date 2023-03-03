@@ -126,5 +126,23 @@
     <ClCompile Include="1463.1로 만들기.cpp">
       <Filter>소스 파일\Backjoon</Filter>
     </ClCompile>
+    <ClCompile Include="1008. A\1008.AB.cpp">
+      <Filter>소스 파일\Backjoon</Filter>
+    </ClCompile>
+    <ClCompile Include="1152.단어의갯수.cpp">
+      <Filter>소스 파일\Backjoon</Filter>
+    </ClCompile>
+    <ClCompile Include="1330.두 수 비교하기.cpp">
+      <Filter>소스 파일\Backjoon</Filter>
+    </ClCompile>
+    <ClCompile Include="1157.단어공부.cpp">
+      <Filter>소스 파일\Backjoon</Filter>
+    </ClCompile>
+    <ClCompile Include="1546.평균.cpp">
+      <Filter>소스 파일\Backjoon</Filter>
+    </ClCompile>
+    <ClCompile Include="2438.별찍기_1.cpp">
+      <Filter>소스 파일\Backjoon</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
