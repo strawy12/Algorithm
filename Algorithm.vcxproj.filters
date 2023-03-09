@@ -22,6 +22,9 @@
     <Filter Include="소스 파일\자료구조">
       <UniqueIdentifier>{9e85eccf-a7f7-4ec0-b203-afa5f9dfb37e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Backjoon\해결">
+      <UniqueIdentifier>{da115efa-902b-421f-8074-851daa0fa73e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Programmers\성격 유형 검사하기.cpp">
@@ -54,17 +57,8 @@
     <ClCompile Include="Graph.cpp">
       <Filter>소스 파일\자료구조</Filter>
     </ClCompile>
-    <ClCompile Include="BaekJoon\2178 미로탐색.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
-    <ClCompile Include="BaekJoon\1012 유기농배추.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
     <ClCompile Include="사잇값 구하기.cpp">
       <Filter>소스 파일\자료구조</Filter>
-    </ClCompile>
-    <ClCompile Include="1753.최단경로.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
     </ClCompile>
     <ClCompile Include="Programmers\크레인 인형뽑기 게임.cpp">
       <Filter>소스 파일\Programmers</Filter>
@@ -78,74 +72,119 @@
     <ClCompile Include="자구 수행.cpp">
       <Filter>소스 파일\자료구조</Filter>
     </ClCompile>
-    <ClCompile Include="1717.집합의 표현.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
-    <ClCompile Include="2750.수 정렬하기.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
-    <ClCompile Include="2571.수 정렬하기 2.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
-    <ClCompile Include="10989.수정렬하기 3.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
-    <ClCompile Include="10814.나이순 정렬.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
-    <ClCompile Include="1920.수 찾기.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
-    <ClCompile Include="1302.베스트셀러.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
-    <ClCompile Include="1620.나는야 포켓몬 마스터 이다솜.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
-    <ClCompile Include="1764.듣보잡.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
-    <ClCompile Include="1316.그룹단어체커.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
-    <ClCompile Include="10815.숫자카드.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
-    <ClCompile Include="10816.숫자카드2.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
-    <ClCompile Include="1072.게임.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
     <ClCompile Include="Programmers\로또의 최고 순위와 최저 순위.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
-    <ClCompile Include="9461.파도반 수열.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
-    <ClCompile Include="1463.1로 만들기.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
     <ClCompile Include="1008. A\1008.AB.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon\1012 유기농배추.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="1072.게임.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
     </ClCompile>
     <ClCompile Include="1152.단어의갯수.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
-    </ClCompile>
-    <ClCompile Include="1330.두 수 비교하기.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
+      <Filter>소스 파일\Backjoon\해결</Filter>
     </ClCompile>
     <ClCompile Include="1157.단어공부.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="1302.베스트셀러.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="1316.그룹단어체커.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="1330.두 수 비교하기.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="1463.1로 만들기.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
     </ClCompile>
     <ClCompile Include="1546.평균.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
+      <Filter>소스 파일\Backjoon\해결</Filter>
     </ClCompile>
-    <ClCompile Include="2438.별찍기_1.cpp">
-      <Filter>소스 파일\Backjoon</Filter>
+    <ClCompile Include="1620.나는야 포켓몬 마스터 이다솜.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="1717.집합의 표현.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="1753.최단경로.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="1764.듣보잡.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
     </ClCompile>
     <ClCompile Include="1799.비숍.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="1920.수 찾기.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="BaekJoon\2178 미로탐색.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="2438.별찍기_1.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="2475.검증수.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="2571.수 정렬하기 2.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="2675.문자열반복.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="2750.수 정렬하기.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="2884.알람시계.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="2908.상수.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="2920.음계.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="3052.나머지.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="9461.파도반 수열.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="10814.나이순 정렬.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="10815.숫자카드.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="10816.숫자카드2.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="10989.수정렬하기 3.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="8958.OX퀴즈.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="10818.최소 최대.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="10871.X보다 작은 수.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="10951.AB4.cpp">
+      <Filter>소스 파일\Backjoon\해결</Filter>
+    </ClCompile>
+    <ClCompile Include="1018.체스판 다시 칠하기.cpp">
       <Filter>소스 파일\Backjoon</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="10818.최소" />
   </ItemGroup>
 </Project>
